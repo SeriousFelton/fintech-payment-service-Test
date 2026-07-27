@@ -1,0 +1,6 @@
+@FintechTask.API_HostAddress = http://localhost:5007
+
+GET {{FintechTask.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
