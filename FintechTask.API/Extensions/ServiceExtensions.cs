@@ -1,9 +1,8 @@
-﻿using FintechTask.Application.Interfaces;
+﻿using FintechTask.API.Services;
+using FintechTask.Application.Interfaces;
 using FintechTask.Infrastructure.Data;
 using FintechTask.Infrastructure.ProviderClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi;
-using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace FintechTask.API.Extensions
 {
@@ -34,7 +33,7 @@ namespace FintechTask.API.Extensions
 
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
-            //временная заглушка, где будут фоновые сервисы
+            services.AddScoped<IOperationService, OperationService>();
             return services;
         }
 
