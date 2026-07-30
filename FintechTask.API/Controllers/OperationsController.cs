@@ -100,6 +100,10 @@ namespace FintechTask.API.Controllers
             {
                 return NotFound(new { error = $"Операция '{id}' не найдена" });
             }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"Ошибка при отправке операции {id}");

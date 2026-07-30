@@ -13,7 +13,7 @@ namespace FintechTask.Application.DTOs
         public string Amount { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Валюта обязательна")]
-        [RegularExpression("^RUB",
+        [RegularExpression("^RUB$",
             ErrorMessage = "Поддерживается только валюта RUB")]
         public string Currency { get; set; } = string.Empty;
 

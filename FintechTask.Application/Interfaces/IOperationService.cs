@@ -8,5 +8,6 @@ namespace FintechTask.Application.Interfaces
         Task<OperationResponse> GetOperationAsync(string operationId);
         Task<List<OperationEventDto>> GetOperationEventsAsync(string operationId);
         Task<OperationResponse> SubmitOperationAsync(string operationId);
+        Task ProcessReceiptAsync(ReceiptRequest request);
     }
 }

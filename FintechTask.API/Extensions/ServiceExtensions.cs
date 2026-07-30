@@ -34,6 +34,7 @@ namespace FintechTask.API.Extensions
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
             services.AddScoped<IOperationService, OperationService>();
+            services.AddHostedService<SubmitBackgroundService>();
             return services;
         }
 

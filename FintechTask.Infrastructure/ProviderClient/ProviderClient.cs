@@ -11,7 +11,7 @@ namespace FintechTask.Infrastructure.ProviderClient
         private readonly HttpClient _httpClient;
         private readonly ILogger<ProviderClient> _logger;
         
-        public ProviderClient(HttpClient httpClient,  ILogger<ProviderClient> logger)
+        public ProviderClient(HttpClient httpClient, ILogger<ProviderClient> logger)
         {
             _httpClient = httpClient;
             _logger = logger;
@@ -32,6 +32,7 @@ namespace FintechTask.Infrastructure.ProviderClient
             response.EnsureSuccessStatusCode();
 
             var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogInformation($"Ответ провайдера: {responseBody}");
             var providerResponse = JsonSerializer.Deserialize<ProviderResponse>(responseBody);
 
             _logger.LogInformation($"Платёж {operationId} принят. ProviderPaymentId: {providerResponse?.ProviderPaymentId}");
