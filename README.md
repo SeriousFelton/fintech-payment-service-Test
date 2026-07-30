@@ -1,34 +1,34 @@
-\Платёжный сервис (Fintech Payment Service)
+Платёжный сервис (Fintech Payment Service)
 
 Сервис для обработки платежей с поддержкой идемпотентности, callback-квитанций и автоматического восстановления после сбоев.
 
-\Запуск
+Запуск
 
-\ Требования
+Требования
 
-\- Docker
+- Docker
 
-\- Docker Compose
+- Docker Compose
 
 
 
-\ Команды
+ Команды
 
 ```bash
 
-\ Клонировать репозиторий
+ Клонировать репозиторий
 
 git clone https://github.com/SeriousFelton/fintech-payment-service-Test.git
 
 cd fintech-payment-service-Test
 
-\ Запустить сервис
+ Запустить сервис
 
 docker compose up --build
 
 Сервис будет доступен по адресу: http://localhost:8080
 
-\ Стек технологий
+ Стек технологий
 
 .NET 10 - основная платформа
 
@@ -42,7 +42,7 @@ Polly — политики повторных попыток и Circuit Breaker
 
 Docker \& Docker Compose — контейнеризация
 
-\ Архитектура
+ Архитектура
 
 Domain - бизнес-сущности
 
